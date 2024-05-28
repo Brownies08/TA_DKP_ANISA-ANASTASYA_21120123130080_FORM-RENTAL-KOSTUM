@@ -4,21 +4,22 @@
  */
 package tugasakhirnb;
 
+import java.awt.event.KeyEvent;
+import java.time.LocalDate;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
 /**
  *
  * @author anisa
  */
-public class Hasil extends javax.swing.JFrame {
-private String hasil;
+public class Rentalkostum extends javax.swing.JFrame {
+
     /**
-     * Creates new form Hasil
-     * @param hasil
+     * Creates new form Rentalkostum
      */
-    public Hasil(String hasil) {
-        this.hasil = hasil;
+    public Rentalkostum() {
         initComponents();
-        jTextArea2.setText(this.hasil);
-        jTextArea2.setEditable(false);
     }
 
     /**
@@ -30,65 +31,329 @@ private String hasil;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
+        ekspedisi = new javax.swing.JLabel();
+        Judul = new javax.swing.JLabel();
+        namalengkap = new javax.swing.JLabel();
+        NamaField = new javax.swing.JTextField();
+        hP = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        KostumBox = new javax.swing.JComboBox<>();
+        jLabel5 = new javax.swing.JLabel();
+        TanggalBox = new com.toedter.calendar.JDateChooser();
+        NoHPField = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        sizeSButton = new javax.swing.JRadioButton();
+        sizeMButton = new javax.swing.JRadioButton();
+        sizeLButton = new javax.swing.JRadioButton();
+        sizeXLButton = new javax.swing.JRadioButton();
+        RulesCheckbox = new javax.swing.JCheckBox();
+        SubmitButton = new javax.swing.JButton();
+        EkspedisiBox = new javax.swing.JComboBox<>();
+        Jlabel7 = new javax.swing.JLabel();
+        MandiriButton = new javax.swing.JRadioButton();
+        BNIButton = new javax.swing.JRadioButton();
+        BCAButton = new javax.swing.JRadioButton();
+        BRIButton = new javax.swing.JRadioButton();
         jPanel1 = new javax.swing.JPanel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1280, 900));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(0, 153, 153));
+        ekspedisi.setFont(new java.awt.Font("Palatino Linotype", 1, 13)); // NOI18N
+        ekspedisi.setForeground(new java.awt.Color(204, 204, 255));
+        ekspedisi.setText("Pilihan Ekspedisi:");
+        getContentPane().add(ekspedisi, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 348, 120, 20));
 
-        jTextArea2.setEditable(false);
-        jTextArea2.setColumns(20);
-        jTextArea2.setFont(new java.awt.Font("Mongolian Baiti", 0, 14)); // NOI18N
-        jTextArea2.setRows(5);
-        jScrollPane2.setViewportView(jTextArea2);
+        Judul.setFont(new java.awt.Font("Mongolian Baiti", 3, 20)); // NOI18N
+        Judul.setForeground(new java.awt.Color(204, 204, 255));
+        Judul.setText("Selamat Datang Di Rental Kostum LeoNyaaa");
+        getContentPane().add(Judul, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 400, 50));
 
-        jLabel2.setFont(new java.awt.Font("Rockwell", 0, 12)); // NOI18N
-        jLabel2.setText("NEW RENTAL APPLIER!");
+        namalengkap.setFont(new java.awt.Font("Palatino Linotype", 1, 13)); // NOI18N
+        namalengkap.setForeground(new java.awt.Color(204, 204, 255));
+        namalengkap.setText("Nama Lengkap Perental:");
+        getContentPane().add(namalengkap, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, 160, 30));
 
-        jLabel1.setFont(new java.awt.Font("OCR A Extended", 1, 10)); // NOI18N
-        jLabel1.setText("Admin akan mengonfirmasi dalam waktu 1x24 jam");
+        NamaField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NamaFieldActionPerformed(evt);
+            }
+        });
+        getContentPane().add(NamaField, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 230, 20));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(157, 157, 157))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(73, 73, 73))))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(jLabel1)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel1)
-                .addGap(106, 106, 106))
-        );
+        hP.setFont(new java.awt.Font("Palatino Linotype", 1, 13)); // NOI18N
+        hP.setForeground(new java.awt.Color(204, 204, 255));
+        hP.setText("No Whatsapp:");
+        getContentPane().add(hP, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 136, 30));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 350, 200));
+        jLabel4.setFont(new java.awt.Font("Palatino Linotype", 1, 13)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(204, 204, 255));
+        jLabel4.setText("Pilihan Kostum:");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, 123, 20));
 
-        setSize(new java.awt.Dimension(363, 235));
+        KostumBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Jing Yuan (160000)", "Dan Heng (150000)", "Aventurine (130000)", "Kafka (120000)", "Himeko (110000)", "Zhongli (130000)", "Neuvilette (170000)", "Venti (110000)", "Nahida (140000)", "Furina (150000)" }));
+        KostumBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                KostumBoxActionPerformed(evt);
+            }
+        });
+        getContentPane().add(KostumBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 230, 30));
+
+        jLabel5.setFont(new java.awt.Font("Palatino Linotype", 1, 13)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(204, 204, 255));
+        jLabel5.setText("Tanggal rental:");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 136, 20));
+        getContentPane().add(TanggalBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 250, 230, 30));
+
+        NoHPField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NoHPFieldActionPerformed(evt);
+            }
+        });
+        NoHPField.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                NoHPFieldKeyTyped(evt);
+            }
+        });
+        getContentPane().add(NoHPField, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 230, -1));
+
+        jLabel6.setFont(new java.awt.Font("Palatino Linotype", 1, 13)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(204, 204, 255));
+        jLabel6.setText("Size:");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 136, 30));
+
+        sizeSButton.setText("S");
+        sizeSButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sizeSButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(sizeSButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, -1, -1));
+
+        sizeMButton.setText("M");
+        getContentPane().add(sizeMButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, -1, -1));
+
+        sizeLButton.setText("L");
+        sizeLButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sizeLButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(sizeLButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 300, -1, -1));
+
+        sizeXLButton.setText("XL");
+        sizeXLButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sizeXLButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(sizeXLButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 300, -1, -1));
+
+        RulesCheckbox.setBackground(new java.awt.Color(0, 51, 51));
+        RulesCheckbox.setFont(new java.awt.Font("Perpetua", 1, 14)); // NOI18N
+        RulesCheckbox.setForeground(new java.awt.Color(204, 204, 255));
+        RulesCheckbox.setText("Apakah anda sudah membaca rules?");
+        RulesCheckbox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RulesCheckboxActionPerformed(evt);
+            }
+        });
+        getContentPane().add(RulesCheckbox, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 465, -1, 40));
+
+        SubmitButton.setText("Submit");
+        SubmitButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SubmitButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(SubmitButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 515, 77, 30));
+
+        EkspedisiBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Lion Parcel (4 Hari)", "JNE (3 Hari)", "SiCepat (2 Hari)", "TIKI (1 Hari)", " " }));
+        EkspedisiBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EkspedisiBoxActionPerformed(evt);
+            }
+        });
+        getContentPane().add(EkspedisiBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 230, 30));
+
+        Jlabel7.setFont(new java.awt.Font("Palatino Linotype", 1, 13)); // NOI18N
+        Jlabel7.setForeground(new java.awt.Color(204, 204, 255));
+        Jlabel7.setText("Pembayaran:");
+        getContentPane().add(Jlabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, -1, 30));
+
+        MandiriButton.setText("Mandiri");
+        MandiriButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MandiriButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(MandiriButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 395, -1, 20));
+
+        BNIButton.setText("BNI");
+        BNIButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BNIButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BNIButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(275, 395, -1, 20));
+
+        BCAButton.setText("BCA");
+        BCAButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BCAButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BCAButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 395, -1, 20));
+
+        BRIButton.setText("BRI");
+        BRIButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BRIButtonActionPerformed(evt);
+            }
+        });
+        getContentPane().add(BRIButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 395, 50, 20));
+
+        jPanel1.setBackground(new java.awt.Color(0, 51, 51));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 610));
+
+        setSize(new java.awt.Dimension(487, 638));
         setLocationRelativeTo(null);
     }// </editor-fold>                        
 
+    private void KostumBoxActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        // TODO add your handling code here:
+    }                                         
+
+    private void NamaFieldActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        // TODO add your handling code here:
+    }                                         
+
+    private void sizeSButtonActionPerformed(java.awt.event.ActionEvent evt) {                                            
+        // TODO add your handling code here:
+    }                                           
+
+    private void sizeLButtonActionPerformed(java.awt.event.ActionEvent evt) {                                            
+        // TODO add your handling code here:
+    }                                           
+
+    private void sizeXLButtonActionPerformed(java.awt.event.ActionEvent evt) {                                             
+        // TODO add your handling code here:
+    }                                            
+
+    private void NoHPFieldActionPerformed(java.awt.event.ActionEvent evt) {                                          
+
+    }                                         
+
+    private void RulesCheckboxActionPerformed(java.awt.event.ActionEvent evt) {                                              
+        // TODO add your handling code here:
+    }                                             
+
+    private void SubmitButtonActionPerformed(java.awt.event.ActionEvent evt) {                                             
+        // TODO add your handling code here:
+        if (!RulesCheckbox.isSelected()) {
+                    JOptionPane.showMessageDialog(null, "Anda harus menyetujui rules sebelum submit.", "Jangan Lupa Baca Rules!", JOptionPane.WARNING_MESSAGE);
+                    return;
+                }
+
+                String nama = NamaField.getText();
+                String kostum = KostumBox.getSelectedItem().toString();
+                String noHP = NoHPField.getText();
+                String TanggalPengembalian = (String) EkspedisiBox.getSelectedItem();
+
+                String size = "";
+                if (sizeSButton.isSelected()) {
+                    size = "S";
+                } else if (sizeMButton.isSelected()) {
+                    size = "M";
+                } else if (sizeLButton.isSelected()) {
+                    size = "L";
+                } else if (sizeXLButton.isSelected()) {
+                    size = "XL";
+                }
+                
+                if (nama.isEmpty() || noHP.isEmpty() || size.isEmpty() || TanggalPengembalian.isEmpty()) {
+                    JOptionPane.showMessageDialog(null, "Semua harus diisi sebelum melanjutkan pemesanan.", "Peringatan", JOptionPane.WARNING_MESSAGE);
+                    return;
+                }
+                int ekspedisiHari = 0;
+                
+                String ekspedisi = EkspedisiBox.getSelectedItem().toString();
+                if ("TIKI (1 Hari)".equals(TanggalPengembalian)) {
+                    ekspedisiHari = 1;
+                } else if ("SiCepat (2 Hari)".equals(TanggalPengembalian)) {
+                    ekspedisiHari = 2;
+                } else if ("JNE (3 Hari)".equals(TanggalPengembalian)) {
+                    ekspedisiHari = 3;
+                } else if ("Lion Parcel (4 Hari)".equals(TanggalPengembalian)) {
+                    ekspedisiHari = 4;
+                }
+
+                if (ekspedisiHari == 0) {
+                    JOptionPane.showMessageDialog(null, "Anda harus memilih salah satu opsi ekspedisi.", "Peringatan", JOptionPane.WARNING_MESSAGE);
+                    return;
+                }
+
+                String pembayaran = "";
+                if (MandiriButton.isSelected()) {
+                    pembayaran = "Mandiri";
+                } else if (BNIButton.isSelected()) {
+                    pembayaran = "BNI";
+                } else if (BCAButton.isSelected()) {
+                    pembayaran = "BCA";
+                } else if (BRIButton.isSelected()) {
+                    pembayaran = "BRI";
+                }
+
+// Menghitung tanggal pengembalian (hari ekspedisi + 3 hari)
+int totalHari = ekspedisiHari + 3;
+LocalDate tanggalSekarang = LocalDate.now();
+LocalDate tanggalPengembalian = tanggalSekarang.plusDays(totalHari);
+
+
+                String hasil = 
+                        "Nama perental: " + nama + "\n" +
+                        "No Whatsapp: " + noHP + "\n" +
+                        "Kostum: " + kostum + "\n" +
+                        "Ukuran kostum: " + size + "\n" + 
+                        "Tanggal pengembalian: " + tanggalPengembalian + "\n" +
+                        "Ekspedisi: " + ekspedisi + "\n" +
+                        "Pembayaran: " + pembayaran;
+
+
+                new Hasil(hasil).setVisible(true);
+                this.dispose();        
+    }                                            
+
+    private void EkspedisiBoxActionPerformed(java.awt.event.ActionEvent evt) {                                             
+        // TODO add your handling code here:
+    }                                            
+
+    private void NoHPFieldKeyTyped(java.awt.event.KeyEvent evt) {                                   
+     char c = evt.getKeyChar();
+                
+                // Hanya izinkan angka dan kontrol (backspace, delete, dll.)
+                if (!Character.isDigit(c) && c != KeyEvent.VK_BACK_SPACE && c != KeyEvent.VK_DELETE) {
+                    evt.consume();  // Mengabaikan karakter yang tidak valid
+                }  // TODO add your handling code here:
+    }                                  
+
+    private void MandiriButtonActionPerformed(java.awt.event.ActionEvent evt) {                                              
+        // TODO add your handling code here:
+    }                                             
+
+    private void BNIButtonActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        // TODO add your handling code here:
+    }                                         
+
+    private void BCAButtonActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        // TODO add your handling code here:
+    }                                         
+
+    private void BRIButtonActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        // TODO add your handling code here:
+    }                                         
+ 
     /**
      * @param args the command line arguments
      */
@@ -106,29 +371,48 @@ private String hasil;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Hasil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Rentalkostum.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Hasil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Rentalkostum.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Hasil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Rentalkostum.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Hasil.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Rentalkostum.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Hasil("Default Text").setVisible(true);
+                new Rentalkostum().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify                     
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JRadioButton BCAButton;
+    private javax.swing.JRadioButton BNIButton;
+    private javax.swing.JRadioButton BRIButton;
+    private javax.swing.JComboBox<String> EkspedisiBox;
+    private javax.swing.JLabel Jlabel7;
+    private javax.swing.JLabel Judul;
+    private javax.swing.JComboBox<String> KostumBox;
+    private javax.swing.JRadioButton MandiriButton;
+    private javax.swing.JTextField NamaField;
+    private javax.swing.JTextField NoHPField;
+    private javax.swing.JCheckBox RulesCheckbox;
+    private javax.swing.JButton SubmitButton;
+    private com.toedter.calendar.JDateChooser TanggalBox;
+    private javax.swing.JLabel ekspedisi;
+    private javax.swing.JLabel hP;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextArea jTextArea2;
+    private javax.swing.JLabel namalengkap;
+    private javax.swing.JRadioButton sizeLButton;
+    private javax.swing.JRadioButton sizeMButton;
+    private javax.swing.JRadioButton sizeSButton;
+    private javax.swing.JRadioButton sizeXLButton;
     // End of variables declaration                   
 }
