@@ -273,7 +273,7 @@ public class Rentalkostum extends javax.swing.JFrame {
                 }
                 
                 if (nama.isEmpty() || noHP.isEmpty() || size.isEmpty() || TanggalPengembalian.isEmpty()) {
-                    JOptionPane.showMessageDialog(null, "Semua harus diisi sebelum melanjutkan pemesanan.", "Peringatan", JOptionPane.WARNING_MESSAGE);
+                    JOptionPane.showMessageDialog(null, ""Pastikan anda melengkapi semua data sebelum melanjutkan pemesanan.", "Peringatan", JOptionPane.WARNING_MESSAGE);
                     return;
                 }
                 int ekspedisiHari = 0;
